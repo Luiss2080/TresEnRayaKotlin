@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tres en Raya</string>
+    <string name="titulo_juego">Tres en Raya</string>
+    <string name="turno_jugador_x">Turno del Jugador X</string>
+    <string name="turno_jugador_o">Turno del Jugador O</string>
+    <string name="ganador_x">¡El Jugador X ha ganado!</string>
+    <string name="ganador_o">¡El Jugador O ha ganado!</string>
+    <string name="empate">¡Empate! No hay ganador.</string>
+    <string name="reiniciar_juego">Reiniciar Juego</string>
+    <string name="casilla_ocupada">Esta casilla ya está ocupada</string>
+    <string name="juego_terminado">El juego ya ha terminado</string>
+</resources>
