@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores específicos del juego -->
+    <color name="primary_text">#FF2C3E50</color>
+    <color name="secondary_text">#FF34495E</color>
+    <color name="background_light">#FFF8F9FA</color>
+    <color name="button_background">#FFFFFF</color>
+    <color name="button_border">#FFE0E6ED</color>
+    <color name="winner_text">#FF27AE60</color>
+    <color name="game_board_background">#FF34495E</color>
 </resources>

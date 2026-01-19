@@ -1,17 +1,17 @@
 package com.example.tresenrayakotlin
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.tresenrayakotlin.modelo.Juego
 
 /**
  * Actividad principal que gestiona la interfaz del juego de Tres en Raya
  */
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
 
     // Modelo del juego
     private lateinit var juego: Juego
