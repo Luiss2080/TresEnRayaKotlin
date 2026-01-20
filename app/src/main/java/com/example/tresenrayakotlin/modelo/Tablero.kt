@@ -6,11 +6,11 @@ package com.example.tresenrayakotlin.modelo
 class Tablero {
 
     companion object {
-        const val TAMAÑO = 3
+        const val TAMANO = 3
     }
 
-    private val casillas: Array<Array<Casilla>> = Array(TAMAÑO) { fila ->
-        Array(TAMAÑO) { columna ->
+    private val casillas: Array<Array<Casilla>> = Array(TAMANO) { fila ->
+        Array(TAMANO) { columna ->
             Casilla(fila, columna)
         }
     }
@@ -36,7 +36,7 @@ class Tablero {
      * @return true si la posición es válida
      */
     fun posicionValida(fila: Int, columna: Int): Boolean {
-        return fila in 0 until TAMAÑO && columna in 0 until TAMAÑO
+        return fila in 0 until TAMANO && columna in 0 until TAMANO
     }
 
     /**
@@ -59,7 +59,7 @@ class Tablero {
      * @return las casillas de la fila
      */
     fun obtenerFila(numeroFila: Int): List<Casilla>? {
-        return if (numeroFila in 0 until TAMAÑO) {
+        return if (numeroFila in 0 until TAMANO) {
             casillas[numeroFila].toList()
         } else {
             null
@@ -72,8 +72,8 @@ class Tablero {
      * @return las casillas de la columna
      */
     fun obtenerColumna(numeroColumna: Int): List<Casilla>? {
-        return if (numeroColumna in 0 until TAMAÑO) {
-            (0 until TAMAÑO).map { fila -> casillas[fila][numeroColumna] }
+        return if (numeroColumna in 0 until TAMANO) {
+            (0 until TAMANO).map { fila -> casillas[fila][numeroColumna] }
         } else {
             null
         }
@@ -84,7 +84,7 @@ class Tablero {
      * @return las casillas de la diagonal principal
      */
     fun obtenerDiagonalPrincipal(): List<Casilla> {
-        return (0 until TAMAÑO).map { i -> casillas[i][i] }
+        return (0 until TAMANO).map { i -> casillas[i][i] }
     }
 
     /**
@@ -92,7 +92,7 @@ class Tablero {
      * @return las casillas de la diagonal secundaria
      */
     fun obtenerDiagonalSecundaria(): List<Casilla> {
-        return (0 until TAMAÑO).map { i -> casillas[i][TAMAÑO - 1 - i] }
+        return (0 until TAMANO).map { i -> casillas[i][TAMANO - 1 - i] }
     }
 
     /**

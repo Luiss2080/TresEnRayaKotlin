@@ -50,9 +50,18 @@ class MainActivity : AppCompatActivity() {
         // Inicializar la matriz de botones del tablero
         botonesCasillas = Array(3) { fila ->
             Array(3) { columna ->
-                val nombreBoton = "botonCasilla$fila$columna"
-                val idRecurso = resources.getIdentifier(nombreBoton, "id", packageName)
-                findViewById<Button>(idRecurso)
+                when (fila * 3 + columna) {
+                    0 -> findViewById<Button>(R.id.botonCasilla00)
+                    1 -> findViewById<Button>(R.id.botonCasilla01)
+                    2 -> findViewById<Button>(R.id.botonCasilla02)
+                    3 -> findViewById<Button>(R.id.botonCasilla10)
+                    4 -> findViewById<Button>(R.id.botonCasilla11)
+                    5 -> findViewById<Button>(R.id.botonCasilla12)
+                    6 -> findViewById<Button>(R.id.botonCasilla20)
+                    7 -> findViewById<Button>(R.id.botonCasilla21)
+                    8 -> findViewById<Button>(R.id.botonCasilla22)
+                    else -> throw IllegalArgumentException("Posición inválida: $fila, $columna")
+                }
             }
         }
     }

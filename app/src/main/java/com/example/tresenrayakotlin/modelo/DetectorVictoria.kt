@@ -12,7 +12,7 @@ class DetectorVictoria {
      */
     fun verificarGanador(tablero: Tablero): String? {
         // Verificar filas
-        for (i in 0 until Tablero.TAMAÑO) {
+        for (i in 0 until Tablero.TAMANO) {
             val fila = tablero.obtenerFila(i)
             if (fila != null) {
                 val ganador = verificarLineaGanadora(fila)
@@ -21,7 +21,7 @@ class DetectorVictoria {
         }
 
         // Verificar columnas
-        for (i in 0 until Tablero.TAMAÑO) {
+        for (i in 0 until Tablero.TAMANO) {
             val columna = tablero.obtenerColumna(i)
             if (columna != null) {
                 val ganador = verificarLineaGanadora(columna)
@@ -48,7 +48,7 @@ class DetectorVictoria {
      * @return el símbolo ganador o null si no hay ganador
      */
     private fun verificarLineaGanadora(casillas: List<Casilla>): String? {
-        if (casillas.size != Tablero.TAMAÑO) return null
+        if (casillas.size != Tablero.TAMANO) return null
 
         val primerSimbolo = casillas[0].valor
 
@@ -68,14 +68,5 @@ class DetectorVictoria {
      */
     fun esEmpate(tablero: Tablero): Boolean {
         return verificarGanador(tablero) == null && tablero.estaLleno()
-    }
-
-    /**
-     * Verifica si el juego ha terminado
-     * @param tablero el tablero a verificar
-     * @return true si hay ganador o empate
-     */
-    fun juegoTerminado(tablero: Tablero): Boolean {
-        return verificarGanador(tablero) != null || tablero.estaLleno()
     }
 }
