@@ -136,4 +136,33 @@ class Juego {
     fun obtenerJugador2(): Jugador {
         return jugador2
     }
+
+    /**
+     * Obtiene el símbolo en una casilla específica
+     * @param fila la fila de la casilla
+     * @param columna la columna de la casilla
+     * @return el símbolo en la casilla o cadena vacía si está vacía
+     */
+    fun obtenerSimboloEnCasilla(fila: Int, columna: Int): String {
+        val casilla = tablero.obtenerCasilla(fila, columna)
+        return casilla.valor
+    }
+
+    /**
+     * Verifica si una casilla específica está ocupada
+     * @param fila la fila de la casilla
+     * @param columna la columna de la casilla
+     * @return true si la casilla está ocupada
+     */
+    fun esCasillaOcupada(fila: Int, columna: Int): Boolean {
+        return !tablero.obtenerCasilla(fila, columna).estaVacia()
+    }
+
+    /**
+     * Verifica si hay un ganador en el juego
+     * @return true si hay un ganador
+     */
+    fun hayGanador(): Boolean {
+        return ganador != null
+    }
 }

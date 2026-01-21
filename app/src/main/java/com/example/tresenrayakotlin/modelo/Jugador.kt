@@ -24,6 +24,22 @@ data class Jugador(
         return nombre
     }
 
+    /**
+     * Verifica si el jugador es el jugador X
+     * @return true si el jugador tiene símbolo X
+     */
+    fun esJugadorX(): Boolean {
+        return simbolo == SIMBOLO_X
+    }
+
+    /**
+     * Verifica si el jugador es el jugador O
+     * @return true si el jugador tiene símbolo O
+     */
+    fun esJugadorO(): Boolean {
+        return simbolo == SIMBOLO_O
+    }
+
     companion object {
         const val SIMBOLO_X = "X"
         const val SIMBOLO_O = "O"

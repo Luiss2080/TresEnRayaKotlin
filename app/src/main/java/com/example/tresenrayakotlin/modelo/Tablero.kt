@@ -20,12 +20,13 @@ class Tablero {
      * @param fila la fila de la casilla (0-2)
      * @param columna la columna de la casilla (0-2)
      * @return la casilla en la posición especificada
+     * @throws IndexOutOfBoundsException si la posición no es válida
      */
-    fun obtenerCasilla(fila: Int, columna: Int): Casilla? {
+    fun obtenerCasilla(fila: Int, columna: Int): Casilla {
         return if (posicionValida(fila, columna)) {
             casillas[fila][columna]
         } else {
-            null
+            throw IndexOutOfBoundsException("Posición inválida: ($fila, $columna)")
         }
     }
 
