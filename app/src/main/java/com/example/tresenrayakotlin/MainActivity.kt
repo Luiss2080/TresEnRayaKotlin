@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private var textoTurnoActual: TextView? = null
     private var textoMensajeEstado: TextView? = null
     private var textoMensajeSecundario: TextView? = null
-    private var cardMensajeEstado: MaterialCardView? = null
+    private var cardMensajeEstado: View? = null
     private var botonReiniciarJuego: Button? = null
     private var botonReiniciarStats: Button? = null
     private var botonesCasillas: Array<Array<Button?>>? = null
@@ -222,11 +222,15 @@ class MainActivity : AppCompatActivity() {
             if (game.estaJuegoActivo()) {
                 val currentPlayer = game.obtenerJugadorActual()
                 if (currentPlayer.esJugadorX()) {
-                    textoTurnoActual?.text = "TURNO DEL JUGADOR X"
-                    progressBarTurno?.progressTint = getColorStateList(R.color.progress_x)
+                    textoTurnoActual?.text = getString(R.string.turno_jugador_x)
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                        progressBarTurno?.progressTintList = getColorStateList(R.color.progress_x)
+                    }
                 } else {
-                    textoTurnoActual?.text = "TURNO DEL JUGADOR O"
-                    progressBarTurno?.progressTint = getColorStateList(R.color.progress_o)
+                    textoTurnoActual?.text = getString(R.string.turno_jugador_o)
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                        progressBarTurno?.progressTintList = getColorStateList(R.color.progress_o)
+                    }
                 }
                 textoTurnoActual?.visibility = View.VISIBLE
             }
@@ -245,9 +249,9 @@ class MainActivity : AppCompatActivity() {
 
             val stats = estadisticas!!
             val secondaryMessage = if (isPlayerX) {
-                "Victorias totales de X: ${stats.obtenerVictoriasX()}"
+                getString(R.string.victorias_x_total, stats.obtenerVictoriasX())
             } else {
-                "Victorias totales de O: ${stats.obtenerVictoriasO()}"
+                getString(R.string.victorias_o_total, stats.obtenerVictoriasO())
             }
 
             showAnimatedMessage(message, secondaryMessage, R.color.victory_glow)
@@ -261,7 +265,7 @@ class MainActivity : AppCompatActivity() {
         try {
             val message = mensajesEmpate.random()
             val stats = estadisticas!!
-            val secondaryMessage = "Empates totales: ${stats.obtenerEmpates()}"
+            val secondaryMessage = getString(R.string.empates_total, stats.obtenerEmpates())
 
             showAnimatedMessage(message, secondaryMessage, R.color.draw_glow)
             disableAllButtons()
@@ -300,7 +304,7 @@ class MainActivity : AppCompatActivity() {
             textoVictoriasX?.text = stats.obtenerVictoriasX().toString()
             textoVictoriasO?.text = stats.obtenerVictoriasO().toString()
             textoEmpates?.text = stats.obtenerEmpates().toString()
-            textoPartidasTotales?.text = "PARTIDAS JUGADAS: ${stats.obtenerPartidasTotales()}"
+            textoPartidasTotales?.text = getString(R.string.partidas_jugadas, stats.obtenerPartidasTotales())
 
         } catch (e: Exception) {
             handleError("Error actualizando estadísticas", e)
