@@ -11,7 +11,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tresenrayakotlin.modelo.Juego
 import com.example.tresenrayakotlin.modelo.EstadisticasJuego
-import com.google.android.material.card.MaterialCardView
 
 /**
  * Actividad principal que gestiona la interfaz del juego de Tres en Raya
