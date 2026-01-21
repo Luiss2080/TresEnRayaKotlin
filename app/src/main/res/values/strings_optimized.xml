@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tres en Raya</string>
+    <string name="titulo_juego">Tres en Raya</string>
+    <string name="reiniciar_juego">Reiniciar Juego</string>
+</resources>
+
