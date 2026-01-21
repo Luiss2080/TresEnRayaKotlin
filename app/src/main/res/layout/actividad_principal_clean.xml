@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Título -->
+        <!-- Título principal -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:padding="16dp"
             android:layout_marginBottom="20dp" />
 
-        <!-- Estadísticas -->
+        <!-- Panel de estadísticas -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                     android:text="JUGADOR X"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/primary_text" />
             </LinearLayout>
 
             <!-- Empates -->
@@ -87,7 +87,7 @@
                     android:text="EMPATES"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/primary_text" />
             </LinearLayout>
 
             <!-- Victorias O -->
@@ -115,11 +115,11 @@
                     android:text="JUGADOR O"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/primary_text" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Tablero -->
+        <!-- Tablero de juego -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
             </GridLayout>
         </LinearLayout>
 
-        <!-- Mensaje de estado -->
+        <!-- Mensaje de estado dinámico -->
         <LinearLayout
             android:id="@+id/cardMensajeEstado"
             android:layout_width="match_parent"
@@ -249,7 +249,7 @@
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
-        <!-- Botones -->
+        <!-- Botones de acción -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -286,7 +286,7 @@
             android:layout_height="wrap_content"
             android:text="PARTIDAS JUGADAS: 0"
             android:textStyle="bold"
-            android:textColor="@color/text_on_dark"
+            android:textColor="@color/white"
             android:textAlignment="center"
             android:layout_marginTop="16dp"
             android:background="@color/primary_dark"
