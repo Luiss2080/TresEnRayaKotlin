@@ -10,6 +10,7 @@ import com.example.tresenrayakotlin.modelo.Juego
 
 /**
  * Actividad principal que gestiona la interfaz del juego de Tres en Raya
+ * Versión simplificada y robusta
  */
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             initGame()
         } catch (e: Exception) {
             handleError("Error iniciando la aplicación", e)
-            finish()
         }
     }
 
