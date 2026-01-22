@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Tres en Raya</string>
-    <string name="titulo_juego">Tres en Raya</string>
+    <string name="titulo_juego">TRES EN RAYA</string>
     <string name="turno_jugador_x">TURNO DEL JUGADOR X</string>
     <string name="turno_jugador_o">TURNO DEL JUGADOR O</string>
     <string name="ganador_x">¡El Jugador X ha ganado!</string>
@@ -13,4 +13,11 @@
     <string name="victorias_x_total">Victorias totales de X: %d</string>
     <string name="victorias_o_total">Victorias totales de O: %d</string>
     <string name="empates_total">Empates totales: %d</string>
+    <string name="default_score">0</string>
+    <string name="jugador_x">JUGADOR X</string>
+    <string name="jugador_o">JUGADOR O</string>
+    <string name="empates">EMPATES</string>
+    <string name="nueva_partida">NUEVA PARTIDA</string>
+    <string name="reset_stats">RESET STATS</string>
+    <string name="partidas_default">PARTIDAS JUGADAS: 0</string>
 </resources>
